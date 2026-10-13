@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 export function ConstructionScreen() {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
-
   return (
     <article className="construction-screen" aria-labelledby="construction-title">
       <Image
@@ -17,26 +15,30 @@ export function ConstructionScreen() {
 
       <header className="construction-header">
         <span className="construction-wordmark">Minneplenka</span>
-        <span>Architectural photography</span>
+        <span>Architectural photography &amp; film</span>
       </header>
 
       <div className="construction-copy">
-        <p className="construction-kicker">Portfolio in progress / 2026</p>
-        <h1 id="construction-title">A sharper view is taking shape.</h1>
+        <p className="construction-kicker">Portfolio in progress</p>
+        <h1 id="construction-title">Website under construction.</h1>
         <div className="construction-note">
           <p>
-            The Minneplenka portfolio is being rebuilt around new architectural
-            photography, aerial imagery, and film. Please check back soon.
+            A new Minneplenka portfolio is on the way. For architectural
+            photography, aerial imagery, or film, get in touch.
           </p>
-          {contactEmail ? (
-            <a href={`mailto:${contactEmail}`}>Start a project ↗</a>
-          ) : null}
+          <nav className="construction-contact" aria-label="Contact Minneplenka">
+            <a href="mailto:maxym.vorotnik@gmail.com">maxym.vorotnik@gmail.com</a>
+            <a href="tel:+16122351090">612 235 1090</a>
+            <a href="https://www.instagram.com/minneplenka/">@minneplenka</a>
+          </nav>
         </div>
       </div>
 
       <footer className="construction-footer">
-        <span>Minneapolis · Minnesota · Beyond</span>
-        <span>Featured work · Icon Homes</span>
+        <span>Featured work &middot; Icon Homes</span>
+        <span>
+          Website by <a href="https://etherstep.com/">Etherstep</a>
+        </span>
       </footer>
     </article>
   );
