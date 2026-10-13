@@ -87,13 +87,13 @@ Choose the lightest platform that meets the studio’s needs. Vercel Web Analyti
 ### Vercel
 
 1. Import this directory as the project root.
-2. Use the detected Next.js settings and Node.js 22.
+2. The tracked `vercel.json` selects the standard Next.js framework and runs `npm run build:vercel` (`next build`). Keep the Vercel build command enabled so the deployment produces the `.next` output Vercel expects.
 3. Add the environment variables above to Production (and Preview if desired).
 4. Deploy, run a test inquiry, and update the canonical URL if a custom domain is attached.
 
 ### OpenAI Sites
 
-The tracked `.openai/hosting.json` contains the assigned Site project ID. The included scripts build a Vinext worker, and the Sites workflow packages `dist/` plus the hosting manifest. Do not replace the project ID when updating the same Site.
+The normal `npm run build` command uses Vinext to build the Cloudflare worker. The tracked `.openai/hosting.json` contains the assigned Site project ID, and the Sites workflow packages `dist/` plus the hosting manifest. Do not replace the project ID when updating the same Site.
 
 ## Performance and accessibility notes
 
